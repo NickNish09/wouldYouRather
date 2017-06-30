@@ -1,0 +1,1 @@
+﻿COPY questions from '/home/nicholas/Downloads/filosoficas.csv' DELIMITERS ',' CSV;
