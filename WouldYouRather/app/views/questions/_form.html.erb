@@ -1,18 +1,15 @@
-<table class="table table-hover">
-     <thead >
-       <tr>
-         <th>Descrição</th>
-         <th>Opção 1</th>
-         <th>Opção 2</th>
-       </tr>
-     </thead>
-     <tbody>
-       <% @questions.each do |question| %>
-         <tr>
-			<td><%= question.description %></td>
-			<td><%= question.option1 %></td>
-			<td><%= question.option2 %></td>           
-         </tr>
-      <%end%>
-    </tbody>
- </table>
+<table>
+    <tr>
+      <div class="descricao"><th colspan="2" align="center"><%= @questions[0].description %></th></div>
+    </tr>
+      <tr>
+        <td><div class="questionbox">
+        <%= button_to @questions[0].option1,questions_add_path(id: 1,opt: 1),class: "btn btn-primary",remote: true %>
+      </div></td>
+        <td>
+        <div class="questionbox">
+          <%= button_to @questions[0].option2,questions_add_path(id: 1,opt: 2),class: "btn btn-danger",remote: true %>
+        </div></td>
+      </tr>
+  
+</table>
